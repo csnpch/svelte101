@@ -1,0 +1,58 @@
+default:
+  image: node:latest
+
+before_script:
+  - npm install
+
+
+stages:
+  - build
+  - test
+  - deploy
+
+
+build:
+  stage: build
+  script:
+    - npm run build
+
+
+test:
+  stage: test
+  script:
+    - npm run test
+    
+  
+
+deploy:
+  stage: deploy
+  script:
+    - npm install netlify-cli -g
+    - npm run build
+    - netlify login
+    - netlify deploy --prod --dir=./public --site=$NETLIFY_SITE_NAME
+  only:
+    - main
+
+
+
+
+# note
+  # Can use this to export float env variable
+  # - export NETLIFY_AUTH_TOKEN=$NETLIFY_TOKEN
+
+
+
+
+# Other deploy solutions
+
+  #? Hook API Netlify
+  # script:
+  #   - curl -X POST -d {} https://api.netlify.com/build_hooks/63ef59a5a54be859af21abb3
+  
+  #? Firebase
+  # script:
+  #   - npm run build
+  #   - npm i -g firebase-tools
+  #   - firebase deploy --token $FIREBASE_DEPLOY_KEY
+
