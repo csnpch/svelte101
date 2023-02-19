@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap');
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Prompt', sans-serif !important;
+	overflow-x: hidden;
+	background-color: #060223;
+}
+
+
+
+input{
+	width: 100%;
+	padding: 0.2rem 20px;
+	margin: 0.2rem 2rem 0 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	font-size: 1rem;
+	font-family: 'Prompt', sans-serif !important;
+	color: #333;
+  }
+  
+
+/* Navbar */
+.container-navbar {
+	margin: 0 auto;
+	width: 60vw;
+	height: 4rem;
+	background: #e73200;
+	color: #fff;
+	border-radius: 0rem 0rem 20rem 20rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-logo-text {
+	font-size: 1.3rem;
+	letter-spacing: 0.2rem;
+}
+
+
+
+/* Services */
+.container-services {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.card-service {
+	padding: 1rem 2.5rem;
+	border-radius: 1.5em;
+	box-shadow: 2px 6px #00000020;
+
+	color: #fff;
+	width: 20rem;
+	height: 16rem;
+	background-color: #0097fb99;
+	overflow-x: hidden;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title-service {
+	font-size: 1.1rem;
+	letter-spacing: 0.1rem;
+}
+
+.result-service {
+	max-width: 100%;
+	margin-top: 0.5rem;
+	font-size: large;
+	overflow-wrap: break-word;
+}
+
+
+.decorative-button {
+    background-color: #0f2e5f;
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    padding: 1rem 2rem;
+	margin-top: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.decorative-button:hover {
+	background-color: #091d3d;
+}
+  
